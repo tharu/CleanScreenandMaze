@@ -5,13 +5,14 @@ function circle(x, y, r, c, parent) {
       
         var yp = x ;
     
-        
+        alert("r"+r);
         var p = document.createElement("div");
         p.className = "pixel";
         p.style.left = xp + "px";
         p.style.top = yp + "px";
         p.style.position="absolute";
-        p.style.width+=10;
+        p.style["width"]=r;
+        alert(p.style["width"]);
         if(c) p.style.background = c;
         
         if(parent) {
@@ -33,10 +34,10 @@ function init() {
 var r=50;
 setInterval(function()
 {
-    if(r<100)
-          r+=10;
-    else
-        r=50;
+    // if(r<100)
+          r+=100;
+    // else
+    //     r=50;
         
     circle(100, 100, r, "green");
-},3000 );
+},7000 );
