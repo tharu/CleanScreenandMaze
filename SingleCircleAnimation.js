@@ -4,6 +4,7 @@ window.onload=function()
     init();
     document.getElementById("myCanvas").onclick=stopAnimation;
 }
+
 var timerId;
 function init()
 {
