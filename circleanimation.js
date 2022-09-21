@@ -136,13 +136,6 @@ $(function () {
             }
         }
 
-        /**
-         * Method to runAnimation the circle
-         *
-         * @param {number=} x the absolute position offset in x-plane. Default is this.position.x
-         * @param {number=} y the absolute position offset in y-plane. Default is this.position.y
-         * @returns {undefined}
-         */
         runAnimation(x = this.position.x, y = this.position.y) {
             this.position.x = x;
             this.position.y = y;
@@ -154,21 +147,11 @@ $(function () {
             }, 100));
         }
 
-        /**
-         * Method to remove Circle from the DOM
-         *
-         * @returns {undefined}
-         */
         removeCircle() {
             this.element.remove();          
             canvas.circles = canvas.circles.filter(circle => circle !== this);
         }
 
-        /**
-         * Getter for the 'size' of the Circle
-         *
-         * @returns {number} the height or width
-         */
         getSize() {
             return this.height;
         }
